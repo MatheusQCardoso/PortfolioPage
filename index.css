@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:wght@300&family=Yellowtail&display=swap");
+
+:root {
+  --font-bold: "Bebas Neue", cursive;
+  --font-text: "Rubik", sans-serif;
+  --font-cursive: "Yellowtail", cursive;
+
+  --color-carbon: rgb(42, 42, 42);
+  --color-lightcarbon: rgb(74, 74, 74);
+  --color-lightcarbon2: rgba(74, 74, 74, 0.85);
+  --color-lightcarbon3: rgba(74, 74, 74, 0.3);
+  --color-blue0: #3d5a80;
+  --color-blue1: #0077b6;
+  --color-blue2: #00b4d8;
+  --color-blue3: #98c1d9;
+  --color-blue4: #e0fbfc;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+div,
+a,
+p,
+button,
+label,
+i {
+  font-size: 1rem;
+  font-family: var(--font-text);
+  color: var(--color-lightcarbon);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-bold);
+  color: var(--color-carbon);
+}
+
+/* == MOBILE == */
+
+/* == DESKTOP == */
+
+@media screen and (min-width: 800px) {
+  header {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 5%;
+    background-color: var(--color-blue1);
+    box-shadow: 0px 0px 11px -2px var(--color-blue3);
+  }
+  main {
+    position: relative;
+    overflow-y: auto;
+    margin-left: calc(5% + 250px);
+    width: calc(95% - 250px);
+    height: 100vh;
+    background-color: white;
+    padding: 2rem;
+  }
+  main::before {
+    content: "";
+    position: fixed;
+    top: -10vw;
+    right: -10vw;
+    width: 30vw;
+    height: 30vw;
+    background-color: #3d5a80;
+    border-radius: 50%;
+    z-index: 5;
+  }
+  main::after {
+    content: "";
+    position: fixed;
+  }
+
+  main section {
+    position: relative;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    z-index: 10;
+  }
+
+  .section-card {
+    box-shadow: 0px 3px 19px -7px rgba(0, 0, 0, 0.3);
+  }
+  .section-title {
+    color: var(--color-lightcarbon);
+    position: relative;
+    font-size: 1.6rem;
+    margin-left: 10px;
+  }
+  .section-title::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 4px;
+    left: -25px;
+    background-color: var(--color-blue2);
+  }
+  .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+    height: 0.25rem;
+    background-color: var(--color-blue4);
+  }
+
+  .section-subtitle {
+    position: relative;
+    font-size: 1.2rem;
+    color: var(--color-lightcarbon);
+  }
+  .section-subtitle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 5px;
+    height: 100%;
+    background-color: #00b4d8;
+  }
+
+  /* INTRO */
+  .section-intro {
+    margin-left: 25%;
+    width: 70%;
+    padding: 0.8rem;
+    background-color: var(--color-blue1);
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .section-intro--text {
+    flex: 60;
+    background-color: white;
+    padding: 1rem;
+
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+  }
+  .intro--title {
+    margin-left: 20px;
+    color: var(--color-lightcarbon2);
+    position: relative;
+  }
+  .intro--title::before {
+    content: "";
+    height: 100%;
+    width: 8px;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    background-color: var(--color-blue2);
+  }
+  .intro--subtitle {
+    margin-top: 2px;
+    margin-left: 21px;
+    position: relative;
+    color: var(--color-lightcarbon3);
+  }
+  .intro--subtitle::before {
+    content: "";
+    height: 100%;
+    width: 6px;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    background-color: var(--color-lightcarbon3);
+  }
+  .intro--description {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 0.95rem;
+  }
+  .intro--actions {
+    margin-top: 15px;
+    margin-left: 5px;
+  }
+  .intro--actions a {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    text-decoration: none;
+  }
+  .intro--actions a:nth-of-type(1),
+  .intro--actions a:nth-of-type(1) i {
+    background-color: var(--color-blue2);
+    color: white;
+  }
+  .intro--actions a:nth-of-type(1):hover,
+  .intro--actions a:nth-of-type(1):hover i {
+    background-color: var(--color-blue4);
+    color: var(--color-blue2);
+  }
+  .intro--actions a:nth-of-type(2),
+  .intro--actions a:nth-of-type(2) i {
+    background-color: var(--color-blue3);
+    color: white;
+  }
+  .intro--actions a:nth-of-type(2):hover,
+  .intro--actions a:nth-of-type(2):hover i {
+    background-color: var(--color-blue4);
+    color: var(--color-blue3);
+  }
+  .intro--actions a:nth-of-type(2) {
+    margin-left: 10px;
+  }
+  .section-intro--picture {
+    flex: 40;
+    position: relative;
+  }
+  .section-intro--picture::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 2px;
+    width: 8px;
+    height: 85%;
+    border-right: 0.125rem solid var(--color-blue3);
+    background-color: var(--color-blue4);
+    border-radius: 1vw;
+  }
+  .section-intro--picture::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    border-right: 0.25rem solid var(--color-blue3);
+    background-color: var(--color-blue4);
+    border-radius: 50%;
+  }
+  .intro--picture {
+    border-radius: 50%;
+    margin-left: 10px;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+  }
+  /* PRESENTATION */
+  .presentation {
+    margin-left: 20px;
+    position: relative;
+  }
+  .presentation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -17px;
+    width: 10px;
+    height: 100%;
+    background-color: var(--color-blue2);
+  }
+  .presentation::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -27px;
+    width: 5px;
+    height: 100%;
+    background-color: var(--color-blue3);
+  }
+
+  /* TECHNOLOGIES */
+  .section-technologies {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .technology-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  .technology-card {
+    flex: 1;
+    height: 250px;
+    max-width: 30%;
+    box-shadow: 0px 3px 19px -7px rgba(0, 0, 0, 0.3);
+  }
+  .technology-header {
+    margin: 1.5rem;
+    margin-bottom: 1rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .technology-header img {
+    width: 2rem;
+    height: 1.6rem;
+    background-color: transparent;
+    object-fit: contain;
+    object-position: center;
+  }
+  .technology-header h3 {
+    color: var(--color-blue2);
+    font-size: 1.3rem;
+  }
+  .technology-card p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  /* RESUME */
+  .section-resume .section-card {
+    margin-top: 20px;
+    padding: 2rem;
+  }
+  .resume-list {
+    margin-top: 10px;
+    list-style-type: disc;
+    list-style: disc;
+  }
+  .resume-list-item {
+  }
+  .resume-list-item h4 {
+    font-size: 1.3rem;
+  }
+  .resume-list-item h5 {
+    font-size: 1.1rem;
+  }
+  .resume-list-item p {
+    font-size: 1.1rem;
+  }
+}
